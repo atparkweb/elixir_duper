@@ -5,7 +5,7 @@ defmodule Duper.Gatherer do
 
   # API
   def start_link(worker_count) do
-    GenServer.start_link(__MODUE__, worker_count, name: @me)
+    GenServer.start_link(__MODULE__, worker_count, name: @me)
   end
   
   def done() do
